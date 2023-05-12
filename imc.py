@@ -6,10 +6,10 @@ considerada saudável em termos de peso em relação à altura.
 Vamos considerar as seguintes categorias:
 Abaixo do peso: IMC abaixo de 18,5
 Peso normal: IMC entre 18,5 e 24,9
-Sobrepeso: IMC entre 25 e 29,9
+Acima do peso: IMC entre 25 e 29,9
 Obesidade classe I: IMC entre 30 e 34,9
-Obesidade classe II: IMC entre 35 e 39,9
-Obesidade classe III: IMC igual ou acima de 40 
+Obesidade classe II (severa): IMC entre 35 e 39,9
+Obesidade classe III(mórbida): IMC igual ou acima de 40 
 
 Para esse projeto utilizamos a biblioteca de interface gráfica 
 de usuário (GUI) Tkinter.
@@ -34,11 +34,11 @@ def calcular_imc():
     elif imc <= 29.9:
         msg = '*** Você está acima do peso ***'
     elif imc <= 34.9:
-        msg = '*** Você está com sobrepeso ***'
+        msg = '*** Você está com obesidade classe I ***'
     elif imc <= 40:
-        msg = '*** Você está com obesidade ***'
+        msg = '*** Você está com obesidade classe II (severa) ***'
     else:
-         msg = '*** Você esta com obesidade mórbida ***'
+         msg = '*** Você esta com obesidade classe III (mórbida) ***'
     
     # Exibir resultado
     label_resultado['text'] = f'Seu IMC é: {imc:.2f}'
